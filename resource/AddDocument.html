@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Document Tracking System - Add File</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="tyr.js"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">Doc. Tracking System</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+                <div class="input-group">
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <a class="nav-link" href="tables.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        Admin
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">ADD DOCUMENT</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Add Documents</li>
+                        </ol>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <form enctype="multipart/form-data" method="post" id="add">
+                                  <div class="row">
+                                    <div class="col-6">
+                                        <label for="document_TITLE">Document TITLE</label>
+                                      <input type="text" class="form-control" id="document_TITLE" name="document_TITLE">
+                                    </div>
+
+                                      <div class="col-3">
+                                      <label for="inputState">document_TYPE</label>
+                                      <select id="document_TYPE" class="form-control" name="document_TYPE">
+                                        <option selected>Choose...</option>
+                                            <option  value = 'PDF'>PDF</option>
+                                            <option  value = 'DOC/DOCX'>DOC/DOCX</option>
+                                            <option  value = 'XLSX'>XLSX</option>
+                                            <option  value = 'TXT'>TXT</option>
+                                      </select><br>
+                                    </div>
+
+                                <div class="row">
+                                    <div class="col-5">
+                                        <label for="document_ORIGIN">document_ORIGIN</label>
+                                        <input type="text" class="form-control" id="document_ORIGIN" name="document_ORIGIN">
+                                    </div>
+
+                                    <div class="col-2">
+                                        <label for="date_received">date_received</label>
+                                      <input type="date" class="form-control" id="date_received" name="date_received">
+                                    </div>
+
+                                    <div class="col-5">
+                                        <label for="document_DESTINATION">document_DESTINATION</label>
+                                        <input type="text" class="form-control" id="document_DESTINATION" name="document_DESTINATION">
+                                    <br></div>
+
+                                <div class="row">
+                                    <div class="col-5">
+                                        <label for="tags">Tags:</label>
+                                      <input type="text" class="form-control" id="tags" name="tags">
+                                    <br></div>
+
+                                  <div class="form-group">
+                                    <label for="document_FILE">document_FILE:</label>
+                                    <input type="file" class="form-control-file" id="document_FILE" name="document_FILE">
+                                  </div>
+                                </div>
+                                </div>
+                                </div>
+                                
+                                <br>
+                                <a class="btn btn-danger" href="dashboard.html" role="button">BACK</a>&nbsp;&nbsp;
+                                <input class="btn btn-primary" type="submit" id="save" value="SAVE">
+                            </form>
+                            </div>
+                        </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Document Tracking System 2022</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
